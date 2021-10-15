@@ -13,6 +13,22 @@ Notes:
 - You may not use the same element twice.
 - You can return the answer in any order.
 """
-def two_sum(nums, target):
-    # Your code here
 
+# [3, 4, 2, 1], 6 
+def two_sum(nums, target):
+    dictionary = {}
+
+    for i in range(len(nums)):
+        secondNum = target-nums[i]
+        if secondNum in dictionary.keys():
+            secondIdx = nums.index(secondNum)
+            if i != secondIdx:
+                return sorted([i, secondIdx])
+        dictionary.update({nums[i]: i})
+
+
+
+
+print(two_sum([2,5,9,13], 7))
+print(two_sum([4,3,5], 8))
+print(two_sum([3, 1, 2, 4], 6 ))
