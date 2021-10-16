@@ -17,14 +17,16 @@ Notes:
 # [3, 4, 2, 1], 6 
 def two_sum(nums, target):
     dictionary = {}
-
-    for i in range(len(nums)):
-        secondNum = target-nums[i]
-        if secondNum in dictionary.keys():
-            secondIdx = nums.index(secondNum)
+    for i in range(len(nums)): #going through list of numbers
+        secondNum = target-nums[i] #subtracting target number from each element
+        print("secondNum", secondNum)
+        if secondNum in dictionary.keys(): #if element is in dictionary of keys
+            print("secondDict", dictionary)
+            secondIdx = nums.index(secondNum) #let second index of second number be assigned to secondNum
             if i != secondIdx:
                 return sorted([i, secondIdx])
         dictionary.update({nums[i]: i})
+        print("dict",dictionary)
 
 
 
