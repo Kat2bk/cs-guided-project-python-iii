@@ -71,3 +71,6 @@
 # 3. Go line by line inside a for loop
 # 4. Add all lines up
 # 5. multiply lines together to figure out runtime of for loop
+
+# Big O is how many steps max will the algorithm take
+# Omega is how many steps minimally will it take
